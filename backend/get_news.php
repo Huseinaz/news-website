@@ -2,11 +2,7 @@
 
 include('connection.php');
 
-$news_id = $_GET['id'];
-
-$query = $mysqli ->prepare('SELECT * FROM news WHERE id = ?');
-
-$query ->bind_param('i', $news_id);
+$query = $mysqli ->prepare('SELECT * FROM news');
 
 $query ->execute();
 
